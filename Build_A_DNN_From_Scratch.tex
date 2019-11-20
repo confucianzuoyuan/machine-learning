@@ -16,7 +16,7 @@
     \item 一个输入层，$x$
     \item 任意数量的隐藏层
     \item 一个输出层，$\hat{y}$
-    \item 每层之间有一组权值和偏置，$W and b$
+    \item 每层之间有一组权值和偏置，$W \ and \ b$
     \item 为隐藏层选择一种激活函数，$\sigma$。在教程中我们使用Sigmoid激活函数。
 \end{itemize}
 
@@ -90,7 +90,7 @@ class NeuralNetwork:
 常用的损失函数有很多种，根据模型的需求来选择。在本教程中，我们使用误差平方和作为损失函数。
 
 \begin{equation}
-    Sum\-of\-Squares Error = \sum_{i=1}^{n}(y-\hat{y})^2.
+    Sum\text{--}of\text{--}Squares \ Error = \sum_{i=1}^{n}(y-\hat{y})^2.
 \end{equation}
 
 误差平方和是求每个预测值和真实值之间的误差再求和，这个误差是他们的差值求平方以便我们观察误差的绝对值。
