@@ -58,10 +58,12 @@
 
 预计时间：10天
 
-### 第六阶段：Tensorflow 2.0教程
+### 第六阶段：Scikit-Learn、Keras和Tensorflow 2.0教程
 
+- Scikit-Learn库
 - Tensorflow基础
 - Tensorflow进阶
+- Keras高层API
 
 预计时间：4天
 
