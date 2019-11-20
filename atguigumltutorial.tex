@@ -1,0 +1,82 @@
+% !Mode:: "TeX:UTF-8"
+
+\documentclass[twoside,nofonts,fancyhdr,openany,UTF8,fontset = fandol]{ctexbook}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{amsmath}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+
+\CTEXsetup[format={\raggedright}]{chapter}
+\CTEXsetup[format={\Large\bfseries}]{section}
+\CTEXsetup[format={\large\bfseries}]{subsection}
+\CTEXsetup[format={\normalsize\bfseries}]{subsubsection}
+
+% Needed for some foreign characters
+\usepackage[T1]{fontenc}
+
+\usepackage[pdfpagelabels=true,
+pdffitwindow=false,
+pdfview=FitH,
+pdfstartview=FitH,
+pagebackref=true,
+breaklinks=true,
+colorlinks=false,
+bookmarks=true,
+hidelinks=true,
+bookmarksnumbered=true,
+bookmarksopen=true,
+bookmarksopenlevel=1,
+bookmarksdepth=1,
+plainpages=true]{hyperref}
+\usepackage{bookmark}
+
+% Draft
+\usepackage{draftwatermark}
+\SetWatermarkText{尚硅谷}
+\SetWatermarkLightness{0.9}
+\usepackage{background}
+\SetBgContents{仅供学习使用，不得用于商业目的。
+\url{https://github.com/exacity/deeplearningbook-chinese}}
+\SetBgScale{1}
+\SetBgAngle{0}
+\SetBgOpacity{1}
+\SetBgColor{red}
+\SetBgPosition{current page.north}
+\SetBgVshift{-0.5cm}
+
+\begin{document}
+
+\tableofcontents
+
+\input{Build_A_DNN_From_Scratch.tex}
+    
+\end{document}
