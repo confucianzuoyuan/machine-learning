@@ -119,7 +119,7 @@ class NeuralNetwork:
     \begin{split}
         \frac{\partial Loss(y,\hat{y})}{\partial W} &= 
         \frac{\partial Loss(y,\hat{y})}{\partial \hat{y}} * \frac{\partial \hat{y}}{\partial z} * \frac{\partial z}{\partial W} \quad where \quad z = Wx + b \\
-        &= 2(y-\hat{y})*Sigmoid函数的导数*x \\
+        &= 2(y-\hat{y})*Sigmoid \text{函数的导数}*x \\
         &= 2(y-\hat{y})*z(1-z)*x
     \end{split}
 \end{equation}
