@@ -149,11 +149,12 @@ class NeuralNetwork:
         d_weights1 = np.dot(self.input.T,  (np.dot(2*(self.y - self.output) * sigmoid_derivative(self.output), self.weights2.T) * sigmoid_derivative(self.layer1)))
 
         # update the weights with the derivative (slope) of the loss function
+        # 利用求得的梯度更新权值，所以叫梯度下降
         self.weights1 += d_weights1
         self.weights2 += d_weights2
 \end{lstlisting}
 
-\subsection{整合并完成一个实例}
+\section{整合并完成一个实例}
 
 既然我们已经有了包括前向传播和反向传播的完整Python代码，那么就将其应用到一个例子上看看它是如何工作的吧。
 
@@ -175,7 +176,7 @@ class NeuralNetwork:
 
 注意预测值和真实值之间存在细微的误差是允许的。这样可以防止模型过拟合并且使得神经网络对于未知数据有着更强的泛化能力。
 
-\subsection{下一步是什么？}
+\section{下一步是什么？}
 
 幸运的是我们的学习之旅还没有结束，仍然有很多关于神经网络和深度学习的内容需要学习。例如：
 
@@ -187,10 +188,26 @@ class NeuralNetwork:
 
 我很快会写更多关于这个主题的内容，敬请期待！
 
-\subsection{最后的想法}
+\section{最后的想法}
 
 我自己也从零开始写了很多神经网络的代码。
 
 虽然可以使用诸如Tensorflow和Keras这样的深度学习框架方便的搭建深层网络而不需要完全理解其内部工作原理。但是我觉得对于有追求的数据科学家来说，理解内部原理是非常有益的。
 
 这种练习对我自己来说已成成为重要的时间投入，希望也能对你有所帮助。
+
+\section{推导笔记}
+
+这里要注意的一点是，程序中将偏置$b$设置为了$0$。所以预测结果为：
+
+\begin{align*}
+    \hat{y} = \sigma (W_2 \sigma(W_1 X)) \\
+    layer1 = \sigma(W_1 X) \\
+    output = \sigma(W_2 layer1)
+\end{align*}
+
+用到的矩阵求导的一个公式如下，假设$A$和$B$都是矩阵，则
+
+\begin{equation}
+    \frac{\partial AB}{A} = B^T
+\end{equation}
