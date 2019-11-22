@@ -46,7 +46,6 @@
             self.weights2   = np.random.rand(4,1)
             self.y          = y
             self.output     = np.zeros(y.shape)
-    ```
     </code></pre>
     
     <h3>训练神经网络</h3>
@@ -82,7 +81,7 @@
     
     我们在NeuralNetwork类中增加一个计算前向传播的函数。为了简单起见我们假设偏置$b$为$0$：
     
-    ```py
+    <pre><code class="language-python">
     class NeuralNetwork:
         def __init__(self, x, y):
             self.input      = x
@@ -94,7 +93,7 @@
         def feedforward(self):
             self.layer1 = sigmoid(np.dot(self.input, self.weights1))
             self.output = sigmoid(np.dot(self.layer1, self.weights2))
-    ```
+    </code></pre>
     
     但是我们还需要一个方法来评估预测结果的好坏（即预测值和真实值的误差）。这就要用到损失函数。
     
@@ -143,7 +142,7 @@
     
     现在我们将反向传播算法的函数添加到Python代码中
     
-    ```py
+    <pre><code class="language-python">
     class NeuralNetwork:
         def __init__(self, x, y):
             self.input      = x
@@ -165,7 +164,7 @@
             # 利用求得的梯度更新权值，所以叫梯度下降
             self.weights1 += d_weights1
             self.weights2 += d_weights2
-    ```
+    </code></pre>
     
     <h2>整合并完成一个实例</h2>
     
@@ -226,5 +225,3 @@
     $$
   </body>
 </html>
-
-
